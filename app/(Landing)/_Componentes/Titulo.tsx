@@ -1,9 +1,16 @@
 "use client"
 import {Button} from "@/components/ui/button";
 import {ArrowRight} from "lucide-react";
+import {useConvexAuth} from "convex/react";
+import Link from "next/link";
+import {Spinner} from "@/components/spinner";
+import {SignInButton} from "@clerk/clerk-react";
 
 
 export function Titulo() {
+	const {isAuthenticated, isLoading} = useConvexAuth()
+
+
 	return (
 		<div className={'max-w-3xl space-y-4 dark:bg-[#1F1F1F]'}>
 			<h1 className={'text-1xl sm:text-3xl md:text-3xl font-light'}>
@@ -17,10 +24,34 @@ export function Titulo() {
 				</span>
 			</p>
 			</h3>
-			<Button className={'bg-purple-900 hover:text-purple-900 dark:text-white hover:dark:bg-[#1F1F1F] hover:bg-white hover:border-purple-900 hover:border-solid hover:border-2'}>
-				Empezar
-				<ArrowRight className={'h-4 w-4 ml-2'}></ArrowRight>
-			</Button>
+			{
+				isLoading && (
+					<div className={'FlexCentrado'}>
+						<Spinner size={'lg'}></Spinner>
+					</div>
+				)
+			}
+			{
+				isAuthenticated && !isLoading &&(
+					<Button className={'bg-purple-900 hover:text-purple-900 dark:text-white hover:dark:bg-[#1F1F1F] hover:bg-white hover:border-purple-900 hover:border-solid hover:border-2'} asChild>
+						<Link href={'/algo'}/>
+						Empezar
+						<ArrowRight className={'h-4 w-4 ml-2'}></ArrowRight>
+					</Button>
+				)
+			}
+			{
+				!isAuthenticated && !isLoading &&(
+					<SignInButton mode={'modal'}>
+						<Button className={'bg-purple-900 hover:text-purple-900 dark:text-white hover:dark:bg-[#1F1F1F] hover:bg-white hover:border-purple-900 hover:border-solid hover:border-2'}   >
+							Empezar
+							<ArrowRight className={'h-4 w-4 ml-2'}></ArrowRight>
+						</Button>
+					</SignInButton>
+
+				)
+			}
+
 		</div>
 	)
 }

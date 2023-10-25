@@ -4,8 +4,17 @@
 
 html, body, :root{
   height: 100%;
-  overflow-x: hidden !important;
-  overflow-y: visible !important;
+  margin: 0 auto !important;
+}
+.FixScroll{
+  margin: 0 auto !important;
+  scrollbar-gutter: stable !important;
+}
+html{
+  scrollbar-gutter: stable !important;
+}
+body[style] {
+  margin: 0 auto !important;
 }
 
 .FlexCentrado{

@@ -4,19 +4,24 @@
 
 html, body, :root{
   height: 100%;
+}
+/*.FixScroll[style]{*/
+/*  margin-right: 15px !important;*/
+/*}*/
+/*html[style]{*/
+/*  scrollbar-gutter: stable !important;*/
+/*}*/
+/*body[style]{*/
+/*  overflow-y: scroll !important;*/
+/*  margin: 0 auto !important;*/
+/*}*/
+html {
+  margin-right: calc(100% - 100vw) !important;
+}
+body {
+  margin-right: calc(100vw - 100%) !important;
   margin: 0 auto !important;
 }
-.FixScroll[style]{
-  margin-right: 15px !important;
-}
-html[style]{
-  scrollbar-gutter: stable !important;
-}
-body[style]{
-  overflow-y: scroll !important;
-  margin: 0 auto !important;
-}
-
 
 .FlexCentrado{
   @apply flex flex-col justify-center items-center

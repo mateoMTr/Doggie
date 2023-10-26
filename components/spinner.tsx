@@ -11,6 +11,9 @@ const SpinnerVariants = cva (
                 sm: "h-2 w-2",
                 lg: "h-6 w-6",
                 icon: "h-10 w-10"
+            },
+            color:{
+                morado: 'bg-purple-900 text-purple-900'
             }
 
         },

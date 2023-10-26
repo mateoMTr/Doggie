@@ -31,7 +31,7 @@ export function Navbar() {
 								<Button variant={'ghost'} size={'sm'} className={''}>Iniciar Sesión</Button>
 							</SignInButton>
 							<SignInButton mode={"modal"}>
-								<Button variant={'ghost'} size={'sm'} className={''}>Probar</Button>
+								<Button variant={'morado'} size={'sm'} className={''}>Probar</Button>
 							</SignInButton>
 						</>
 					)

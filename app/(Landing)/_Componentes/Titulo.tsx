@@ -27,16 +27,18 @@ export function Titulo() {
 			{
 				isLoading && (
 					<div className={'FlexCentrado'}>
-						<Spinner size={'lg'}></Spinner>
+						<Spinner size={'lg'} color={'morado'}></Spinner>
 					</div>
 				)
 			}
 			{
 				isAuthenticated && !isLoading &&(
 					<Button className={'bg-purple-900 hover:text-purple-900 dark:text-white hover:dark:bg-[#1F1F1F] hover:bg-white hover:border-purple-900 hover:border-solid hover:border-2'} asChild>
-						<Link href={'/algo'}/>
-						Empezar
-						<ArrowRight className={'h-4 w-4 ml-2'}></ArrowRight>
+						<Link href={'/algo'}>
+							Vamos
+							<ArrowRight className={'h-4 w-4 ml-2'}></ArrowRight>
+						</Link>
+
 					</Button>
 				)
 			}

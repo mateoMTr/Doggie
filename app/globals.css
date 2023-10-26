@@ -5,6 +5,7 @@
 html, body, :root{
   height: 100%;
 }
+/*#581C87*/
 html {
   margin-right: calc(100% - 100vw) !important;
 }

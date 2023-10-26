@@ -17,9 +17,9 @@ export function Titulo() {
 				Amor. Pasion. Diversion. Entretenimiento. Alegria
 			</h1>
 			<h3 className={'relative text-3xl sm:text-4xl md:text-4xl font-light '}>
-				Eso ellos significan para <p className={'relative font-black bg-purple-900 inline-block text-transparent bg-clip-text p-0.5'}>Doggie.
+				Eso ellos significan para <p className={'relative font-black bg-violet-600 inline-block text-transparent bg-clip-text p-0.5'}>Doggie.
 				<span
-				className="absolute w-full h-1 -bottom-2 left-0 bg-purple-900">
+				className="absolute w-full h-1 -bottom-2 left-0 bg-violet-600 ">
 
 				</span>
 			</p>

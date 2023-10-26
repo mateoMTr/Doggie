@@ -14,9 +14,11 @@ export function Navbar() {
 	const scrolled = useScroll()
 
 	return (
-		<div className={cn("z-50 bg-background w-[calc(100%-var(--removed-body-scroll-bar-size,0px))] dark:bg-[#1F1F1F] fixed top-0 flex items-center p-6", scrolled && "border-b shadow-sm")}>
+		<div className={'FixScroll'}>
+
+		<div className={cn("z-50 bg-background w-screen FixScroll dark:bg-[#1F1F1F] fixed top-0 flex items-center p-6", scrolled && "border-b shadow-sm")}>
 			<Logo></Logo>
-			<div className={'md:ml-0 md:justify-end justify-between w-full flex items-center gap-x-2 pl-5'}>
+			<div className={'md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2 pl-5'}>
 				{
 					isLoading && (
 						<Spinner/>
@@ -47,13 +49,14 @@ export function Navbar() {
 							>
 
 							</UserButton>
-							
+
 						</>
 					)
 				}
 
 				<ModeToggle></ModeToggle>
 			</div>
+		</div>
 		</div>
 	)
 }

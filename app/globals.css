@@ -7,15 +7,16 @@ html, body, :root{
   margin: 0 auto !important;
 }
 .FixScroll[style]{
-  margin: 0 auto !important;
-  scrollbar-gutter: stable !important;
+  margin-right: 15px !important;
 }
-html{
+html[style]{
   scrollbar-gutter: stable !important;
 }
 body[style]{
+  overflow-y: scroll !important;
   margin: 0 auto !important;
 }
+
 
 .FlexCentrado{
   @apply flex flex-col justify-center items-center

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Doggie',
-  description: 'Asi como ellos son tu felicidad, ellos tmb merecen un poco de regreso',
+  description: 'Asi como ellos son tu felicidad, ellos tambien merecen un poco de regreso',
   icons:{
     icon: [
       {
